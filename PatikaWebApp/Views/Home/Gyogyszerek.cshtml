@@ -1,0 +1,20 @@
+@model List<PatikaWebApp.Models.Gyogyszer>
+@{
+    ViewData["Title"] = "Gyógyszerek";
+}
+<h1 class="text-center">Gyógyszerek adatai</h1>
+<table class="table text-center">
+    <thead>
+        <tr><th>Név</th><th>Hatóanyag</th><th>Vényküteles</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var gyogyszer in Model)
+        {
+            <tr>
+                <td><a asp-controller="Home" asp-action="Gyogyszer" asp-route-id="@gyogyszer.Id">@gyogyszer.Nev</a></td>
+                <td>@gyogyszer.Hatoanyag</td>
+                <td><input type="checkbox" checked="@gyogyszer.Venykoteles" /></td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PatikaWebApp</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">PatikaWebApp</a>
+            <a asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-controller="Home" asp-action="Gyogyszerek">Gyógyszerek</a>
+        </div>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+</body>
+</html>
